@@ -1,0 +1,39 @@
+.palettes {
+  display: flex;
+    flex-wrap: wrap;
+
+}
+.palette {
+  margin: 20px;
+  border-radius: 15px;
+  width: 200px;
+  cursor: pointer;
+  /* border: 2px solid black; */
+  box-shadow: 10px 10px 12px rgba(0,0,0,0.5);
+}
+
+.colour{
+  padding: 3px;
+  display: flex;
+}
+
+.hex {
+  width: 100px;
+  margin-right: 10px;
+  color: rgba(0, 0, 0, 0);
+}
+
+.hex:hover{
+  color: rgba(0, 0, 0, 1);
+}
+
+.rgb {
+  width: 200px;
+  text-align: right;
+  color: rgba(0, 0, 0, 0);
+}
+.rgb:hover{
+  color: rgba(0, 0, 0, 1);
+}
+
+
