@@ -1,7 +1,6 @@
 .palettes {
   display: flex;
-    flex-wrap: wrap;
-
+  flex-wrap: wrap;
 }
 .palette {
   margin: 20px;
@@ -9,10 +8,10 @@
   width: 200px;
   cursor: pointer;
   /* border: 2px solid black; */
-  box-shadow: 10px 10px 12px rgba(0,0,0,0.5);
+  box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.5);
 }
 
-.colour{
+.colour {
   padding: 3px;
   display: flex;
 }
@@ -23,8 +22,8 @@
   color: rgba(0, 0, 0, 0);
 }
 
-.hex:hover{
-  color: rgba(0, 0, 0, 1);
+.hex:hover {
+  /* color: rgba(0, 0, 0, 1); */
 }
 
 .rgb {
@@ -32,8 +31,6 @@
   text-align: right;
   color: rgba(0, 0, 0, 0);
 }
-.rgb:hover{
-  color: rgba(0, 0, 0, 1);
+.rgb:hover {
+  /* color: rgba(0, 0, 0, 1); */
 }
-
-

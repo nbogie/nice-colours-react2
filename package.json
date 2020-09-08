@@ -9,7 +9,8 @@
     "nice-color-palettes": "^3.0.0",
     "react": "^16.12.0",
     "react-dom": "^16.12.0",
-    "react-scripts": "3.2.0"
+    "react-scripts": "3.2.0",
+    "react-toastify": "^6.0.8"
   },
   "scripts": {
     "start": "react-scripts start",

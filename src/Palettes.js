@@ -1,38 +1,52 @@
 import React from 'react';
+import { toast } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
+
 //const palettes = require('nice-color-palettes');
 const palettes = require('nice-color-palettes/200');
 
 
+toast.configure();
+function Palettes(props) {
 
-function Palettes(props){
-    
   return (
     <div>
       <h1>Nice Colours</h1>
-      <p>Taken from <a href="https://github.com/Jam3/nice-color-palettes">https://github.com/Jam3/nice-color-palettes</a></p>
-      <p>Click to copy straight to clipboard.</p>
-      <div className="palettes">      
+      <p>Top palettes from ColourLovers, via Matt Deslauriers' <a href="https://github.com/Jam3/nice-color-palettes">https://github.com/Jam3/nice-color-palettes</a></p>
+
+      <p>Click any palette to copy it to clipboard (as JavaScript).</p>
+      <div className="palettes">
         {
-          palettes.map((p, ix) => <Palette key={ix} palette={p}/>)
+          palettes.map((p, ix) => <Palette key={ix} palette={p} />)
         }
       </div>
     </div>
   );
 }
 
-function copyPaletteToClipboardAsJSON(palette){
+function copyPaletteToClipboardAsJSON(palette) {
   console.log(palette);
   navigator.clipboard.writeText(JSON.stringify(palette, null, 2));
 }
+function copyAndNotify(palette) {
+  copyPaletteToClipboardAsJSON(palette);
 
-function Palette({palette}){
+  toast('Copied palette to clipboard!', {
+    position: "bottom-left",
+    autoClose: 2000,
+    hideProgressBar: true,
+    pauseOnHover: true,
+  });
+}
+function Palette({ palette }) {
   return (
-    <div 
-    className="palette"
-    onClick={() => copyPaletteToClipboardAsJSON(palette)}>
-    {
-      palette.map((colourHex, ix) => <Colour key={ix} colourHex={colourHex}/>)
-    }
+    <div
+      className="palette"
+      onClick={() => copyAndNotify(palette)} >
+      {
+        palette.map((colourHex, ix) => <Colour key={ix} colourHex={colourHex} />)
+      }
     </div>
   )
 }
@@ -47,18 +61,18 @@ function hexToRGB(hex) {
   } : null;
 }
 
-function rgbToString({r, g, b}){
-  return `(${r}, ${g}, ${b})`; 
+function rgbToString({ r, g, b }) {
+  return `(${r}, ${g}, ${b})`;
 }
-function Colour({colourHex}){
+function Colour({ colourHex }) {
   const rgbString = rgbToString(hexToRGB(colourHex));
   return (
-    <div 
-      className="colour" 
-      style={{background: colourHex}}
+    <div
+      className="colour"
+      style={{ background: colourHex }}
     >
       <span className="hex">{colourHex}</span> <span className="rgb">{rgbString}</span>
-      </div>
+    </div>
   );
 }
 export default Palettes;
