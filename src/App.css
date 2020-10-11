@@ -49,7 +49,7 @@ code {
   /* color: rgba(0, 0, 0, 1); */
 }
 
-input {
+input#socketIODest {
   margin: 5px;
   padding: 5px;
   min-width: 400px;
