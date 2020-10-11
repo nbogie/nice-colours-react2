@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 
 function RadioBinaryButton({ nameOn, nameOff, current, groupName, changeHandler }) {
 
