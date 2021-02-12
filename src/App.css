@@ -1,5 +1,6 @@
 body {
   margin: 0;
+  padding: 0 20px 0 20px;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
     "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
     sans-serif;
@@ -21,13 +22,13 @@ code {
   border-radius: 15px;
   width: 200px;
   cursor: pointer;
-  /* border: 2px solid black; */
   box-shadow: 10px 10px 12px rgba(0, 0, 0, 0.5);
 }
 
 .colour {
   padding: 3px;
   display: flex;
+  height: 40px;
 }
 
 .hex {
@@ -36,19 +37,11 @@ code {
   color: rgba(0, 0, 0, 0);
 }
 
-.hex:hover {
-  /* color: rgba(0, 0, 0, 1); */
-}
-
 .rgb {
   width: 200px;
   text-align: right;
   color: rgba(0, 0, 0, 0);
 }
-.rgb:hover {
-  /* color: rgba(0, 0, 0, 1); */
-}
-
 input#socketIODest {
   margin: 5px;
   padding: 5px;

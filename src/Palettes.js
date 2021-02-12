@@ -110,13 +110,14 @@ function Palette({ palette, exportAsHexCodes, handleOnClick }) {
   )
 }
 function Colour({ colourHex }) {
-  const rgbString = rgbToString(hexToRGB(colourHex));
+  // const rgbString = rgbToString(hexToRGB(colourHex));
   return (
     <div
       className="colour"
       style={{ background: colourHex }}
     >
-      <span className="hex">{colourHex}</span> <span className="rgb">{rgbString}</span>
+
+      {/* <span className="hex">{colourHex}</span> <span className="rgb">{rgbString}</span> */}
     </div>
   );
 }
